@@ -14,6 +14,7 @@ import static org.junit.Assert.*;
  */
 public class Method_02_Test {
 
+	
     // tag::IDao[]
     interface IDao {
         List<Person> findAll();

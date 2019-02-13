@@ -14,6 +14,7 @@ import static org.junit.Assert.*;
  */
 public class Method_03_Test {
 
+	
     // tag::IDao[]
     interface IDao {
         List<Person> findAll();
@@ -22,7 +23,9 @@ public class Method_03_Test {
         // TODO cette méthode retourne une instance de la classe DaoA
         
         public static IDao getDefaultInstance(){
+        	
         	Method_03_Test instanceDefaut = new Method_03_Test();
+        	
 			return instanceDefaut.new DaoA();
         	
         }
@@ -43,7 +46,7 @@ public class Method_03_Test {
     @Test
     public void test_getDefaultInstance() throws Exception {
         // TODO invoquer la méthode getDefaultInstance() pour que le test soit passant
-        IDao result = null;
+        IDao result = IDao.getDefaultInstance();
 
         assertThat(result.findAll(), hasSize(20));
     }
