@@ -35,8 +35,8 @@ public class Function_06_Test {
     @Test
     public void test_supplier_formatAge() throws Exception {
         // TODO compléter le test unitaire pour qu'il soit passant
-    	Supplier<Person> supplier = null ;
-        String result = formatAge(supplier);
+    	Supplier<Person> supplier ;
+		String result = formatAge(null);
 
         assertThat(result, is("[age=35]"));
     }
@@ -48,10 +48,10 @@ public class Function_06_Test {
         expectedException.expectMessage("require non null object");
 
         // TODO compléter le test unitaire pour qu'il soit passant
-        Supplier<String> supplier = null;
+       
 
         // Avec un paramètre null, cette méthode déclenche un NullPointerException
-        Objects.requireNonNull(null, supplier);
+        Objects.requireNonNull(null, "");
 
     }
 
